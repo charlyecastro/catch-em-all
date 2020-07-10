@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+html,body {
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
 }
@@ -5,6 +12,16 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.img-wrap{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container{
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,4 +52,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.poke-img{
+  width: 100%;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.poke-item{
+  width : 100%
 }
