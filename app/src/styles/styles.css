@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  /* font-family: 'Press Start 2P', cursive; */
 }
 
 html, body {
@@ -17,16 +19,31 @@ html, body {
   pointer-events: none;
 }
 
-.img-wrap {
+.grid-2 {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
 }
 
+.bush-img {
+  width: 100px;
+  /* you can use % */
+  height: auto;
+}
+
+.forest-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+}
+
 .container {
   max-width: 1024px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -34,6 +51,44 @@ html, body {
     -webkit-animation: App-logo-spin infinite 20s linear;
             animation: App-logo-spin infinite 20s linear;
   }
+}
+
+@-webkit-keyframes example {
+  0% {
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+  50% {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  100% {
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+}
+
+@keyframes example {
+  0% {
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+  50% {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  100% {
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+}
+
+#poke-spin {
+  -webkit-animation: example 1.8s  infinite;
+          animation: example 1.8s  infinite;
+  width: 100px;
+  /* you can use % */
+  height: auto;
 }
 
 .App-header {
@@ -143,5 +198,17 @@ nav menu ul {
 nav menu ul li {
   list-style: none;
   margin: .5rem;
+}
+
+.center-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */

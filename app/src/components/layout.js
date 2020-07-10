@@ -20,9 +20,8 @@ function Home({ children }) {
             </header>
             {children}
             <footer>
-                <Link to={constants.routes.home}>Home</Link>
-                
-                <Link to={constants.routes.pokedex}>My Pokedex</Link>
+                {/* <Link to={constants.routes.home}>Home</Link>
+                <Link to={constants.routes.pokedex}>My Pokedex</Link> */}
             </footer>
 
 

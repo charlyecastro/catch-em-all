@@ -4,7 +4,7 @@ const pokedexReducer = (state = [], action) => {
             return [...state, action.payload]
         case `REMOVE`:
             return state.push(action.payload)
-        default:
+        default :
             return state
     }
 }

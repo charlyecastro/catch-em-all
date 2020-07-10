@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
     box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+
   }
   html,body {
     margin: 0;
@@ -14,20 +18,47 @@
     pointer-events: none;
   }
   
-  .img-wrap{
+  .grid-2{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bush-img{
+    width:100px; /* you can use % */
+    height: auto;
+  }
+  .forest-grid{
+    display: grid;
+    //  grid-template-columns: repeat(auto-fit, minmax(50px, 200px)); 
+     grid-template-columns: repeat(5, 1fr); 
+
+     width: 100%;
   }
   
   .container{
     max-width: 1024px;
     margin: 0 auto;
+    padding: 1rem;
   }
   
   @media (prefers-reduced-motion: no-preference) {
     .App-logo {
       animation: App-logo-spin infinite 20s linear;
     }
+  }
+
+  @keyframes example {
+    0% {transform: rotate(25deg)}
+    50% {transform: rotate(-25deg)}
+    100% {transform: rotate(25deg)}
+    // 100% {transform: rotate(-20deg)}
+
+  }
+
+  #poke-spin{
+    animation: example 1.8s  infinite;
+    width:100px; /* you can use % */
+    height: auto;
   }
   
   .App-header {
@@ -105,4 +136,10 @@
         }
       }
     }
+  }
+
+  .center-item {
+    display: flex; 
+    justify-content: center; 
+    align-items: center
   }

@@ -12,15 +12,17 @@ function Home() {
     return (
         <Layout>
             <div>
-                <h1>Pokedex</h1>
+                <h1>My Pokedex</h1>
                 <div className="grid">
-                    {pokeList.map(pokemon => {
+                    { pokeList.length > 0 ?  pokeList.map(pokemon => {
                         return <div>
                             <img src={pokemon.sprites.front_default} />
                             <p>{pokemon.name}</p>
                         </div>
-
-                    })}
+                   
+                    })
+                    :
+                    <p>Go Catch Some Pokemon!</p>}
                 </div>
             </div>
         </Layout>
