@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
-
+import Layout from "./layout"
 import constants from "./constants.js";
 import Axios from 'axios';
 
@@ -20,7 +20,8 @@ function Home() {
     }
 
     return (
-        <div className="container">
+        <Layout>
+        <div>
             <h1>Pokemon</h1>
             <div style={{ display: "grid", gridTemplateColumns: 'repeat(4, 1fr' }}>
                 {allPokemon.map(poke => {
@@ -33,6 +34,7 @@ function Home() {
             <Link to={constants.routes.pokedex}>My Pokedex</Link>
 
         </div>
+        </Layout>
     );
 }
 

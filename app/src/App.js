@@ -5,7 +5,7 @@ import constants from "./components/constants.js";
 import Home from "./components/home"
 import Pokemon from "./components/pokemon"
 import Pokedex from "./components/pokedex"
-import './App.css';
+import './styles/styles.css'
 
 function App() {
   return (
